@@ -4,11 +4,11 @@ import { Provider } from 'react-redux';
 import { seedLocalDatabase } from '@/api/data/seed';
 import ThemeProvider from '@/components/ThemeProvider';
 
+import AuthProvider from './components/AuthProvider';
 import Router from './Router';
 import { store } from './state/store';
 
 import './index.css';
-import AuthProvider from './components/AuthProvider';
 
 // DO NOT REMOVE: Seeds the local storage database with data
 seedLocalDatabase();
