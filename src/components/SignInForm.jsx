@@ -62,7 +62,11 @@ const SignInForm = () => {
           </div>
 
           <div>
-            <Input {...register('password')} type='password' />
+            <Input
+              {...register('password')}
+              type='password'
+              placeholder='password'
+            />
             {errors['password'] && (
               <div className='mt-2 text-sm text-red-500'>
                 {errors['password'].message}
