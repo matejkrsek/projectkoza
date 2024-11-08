@@ -45,7 +45,10 @@ const listingsSlice = createSlice({
 export const fetchListings = createAsyncThunk(
   'listings/fetchListings',
   async (options) => {
-    const response = await api.get('/api/listings', options);
+    console.log('Options:', options);
+    const response = await api.get('/api/listings', {
+      params: options, // Zde předáváme options jako params
+    });
     return response.data;
   },
 );

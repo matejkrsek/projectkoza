@@ -35,6 +35,7 @@ export const getListings = (params = {}) => {
 
   // Handles guests
   if (guests) {
+    console.log('i was here ' + guests);
     filteredListings = filteredListings.filter(
       (listing) => guests <= listing.maxGuests,
     );

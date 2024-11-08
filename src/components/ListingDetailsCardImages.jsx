@@ -24,7 +24,7 @@ const ListingDetailsCardImages = ({ listing }) => {
           alt={listing.name}
         />
         <button
-          onClick={() => navigate('/')} // nebo použijte 'Link' z react-router-dom pro lepší UX
+          onClick={() => navigate(-1)} // Vrací uživatele na předchozí stránku
           className='absolute left-1 top-1 rounded-full bg-white p-2 shadow-md hover:bg-gray-200'
         >
           <svg
