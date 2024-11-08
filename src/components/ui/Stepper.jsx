@@ -37,12 +37,14 @@ const Stepper = React.forwardRef(
           className='h-full w-full border-none bg-transparent text-center outline-none'
           ref={ref}
           {...props}
+          placeholder='guests' // Výchozí text v placeholder
         />
 
         <Button
-          disabled={value === 100 || value === ''}
+          // Tlačítko + je aktivní, pokud je hodnota prázdná (placeholder) nebo mezi 0 a 100
+          disabled={value === 100}
           variant='link'
-          onClick={() => onChange(value + 1)}
+          onClick={() => onChange(value === '' ? 1 : value + 1)} // Pokud je prázdné, nastavíme hodnotu na 1
         >
           +
         </Button>

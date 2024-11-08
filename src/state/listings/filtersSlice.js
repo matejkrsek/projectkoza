@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = { dates: undefined, guests: 0, search: '' };
+const initialState = { dates: undefined, guests: '', search: '' };
 
 const filtersSlice = createSlice({
   name: 'filters',
